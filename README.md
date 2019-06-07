@@ -13,7 +13,7 @@ GNU GPLv3
 
 #### Пример синтеза речи:
 ```sh
-  let speechLib = new require('index.js');
+  let speechLib = require('index.js');
   let speech = new speechLib();
 
   speech.textToSpeech({
