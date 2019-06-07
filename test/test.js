@@ -12,7 +12,6 @@ describe('Text To Speech To Text', function() {
     it('Text To Speech', function(done) {
         this.timeout(60000);
 
-        let filename = 'test/text2speech';
         let dataToCheck = '157157157';
         let speech = new speechLib();
 

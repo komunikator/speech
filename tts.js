@@ -46,7 +46,7 @@ class Tts extends events.EventEmitter {
 
             request(fullUrl)
                 .on('error', err => {
-                    console.log('error');
+                    console.log('Error', err);
                     if (err) {
                         callback(err);
                     }
