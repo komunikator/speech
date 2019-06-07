@@ -1,0 +1,16 @@
+{
+  "name": "speech",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --timeout 10000"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mocha": "^6.1.4",
+    "querystring": "^0.2.0",
+    "request": "^2.88.0"
+  }
+}
