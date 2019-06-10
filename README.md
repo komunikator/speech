@@ -58,7 +58,7 @@ function initSpeech() {
 
 setInteravl(() => {
     if ( !speech.isReadyStt() ) {
-        initSpeech();
+        return initSpeech();
     }
     speech.speechToText([-8,0,0,-8,-8]); // Array 16-bit linear PCM 
 }, 50);
