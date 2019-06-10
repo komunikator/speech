@@ -28,3 +28,38 @@ GNU GPLv3
       }
   });
 ```
+
+#### Пример распознавания речи:
+```sh
+let speechLib = require('index.js');
+let speech = new speechLib();
+
+speech.on('sttInit', (data) => {
+    if (data.err) {
+        return console.warn('get event sttInit error', data.err);
+    }
+    console.log('get event sttInit', data.data);
+});
+
+speech.on('sttOn', (data) => {
+    console.log('sttOn data.text', data.text);
+
+    speech.sttStop();
+});
+
+function initSpeech() {
+    let options = {
+        developer_key: 'developer_key',
+        model: 'general'
+    };
+    return speech.sttInit(options);
+}
+
+
+setInteravl(() => {
+    if ( !speech.isReadyStt() ) {
+        initSpeech();
+    }
+    speech.speechToText([-8,0,0,-8,-8]); // Array 16-bit linear PCM 
+}, 50);
+```
