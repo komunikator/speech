@@ -34,11 +34,11 @@ MIT
 let speechLib = require('index.js');
 let speech = new speechLib();
 
-speech.on('sttInit', (data) => {
-    if (data.err) {
+speech.on('sttInit', (err, data) => {
+    if (err) {
         return console.warn('get event sttInit error', data.err);
     }
-    console.log('get event sttInit', data.data);
+    console.log('get event sttInit', data);
 });
 
 speech.on('sttOn', (data) => {
