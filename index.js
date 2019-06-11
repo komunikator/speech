@@ -59,7 +59,11 @@ class Speech extends events.EventEmitter {
     isReadyStt() {
         return this.stt.isReady();
     }
-
+    
+    isConnectingStt() {
+        return this.stt.isConnecting();
+    }
+    
     sttStop() {
         this.stt.stop();
     }
