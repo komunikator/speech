@@ -14,8 +14,9 @@ class Speech extends events.EventEmitter {
         // ********************* STT ********************* //
         let sttLib = require('./stt');
         this.stt = new sttLib();
+
         this.stt.on('sttInit', (err, data) => {
-            this.emit('sttInit', { err: err, data: data});
+            this.emit('sttInit', err, data);
         });
         this.stt.on('sttOn', (data) => {
             this.emit('sttOn', data);
@@ -73,8 +74,7 @@ class Speech extends events.EventEmitter {
             if ( !this.stt.isConnecting() ) {
                 if (!options || !options.developer_key) {
                     let err = 'sttInit not found options or developer_key'
-                    console.warn(err);
-                    return this.emit('sttInit', { err: err });
+                    return this.emit('sttInit', err);
                 }
 
                 let settings = {

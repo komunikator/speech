@@ -107,7 +107,7 @@ class Stt extends events.EventEmitter {
         });
 
         ws.on('error', (err) => {
-            console.error('ws error', err);
+            console.error('Websocket Error', err);
             this.emit('sttInit', 'Stt init. Websocket Error' + JSON.stringify(err));
         });
 

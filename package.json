@@ -1,16 +1,42 @@
 {
-  "name": "speech",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "mocha --timeout 10000"
+  "_args": [
+    [
+      "git+https://github.com/komunikator/speech.git",
+      "/home/aea-local/projects/mars"
+    ]
+  ],
+  "_from": "git+https://github.com/komunikator/speech.git",
+  "_id": "speech@git+https://github.com/komunikator/speech.git#f6ece8878f180abe74d40dd8545179de17ec2a34",
+  "_inBundle": false,
+  "_integrity": "",
+  "_location": "/speech",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "git",
+    "raw": "git+https://github.com/komunikator/speech.git",
+    "rawSpec": "git+https://github.com/komunikator/speech.git",
+    "saveSpec": "git+https://github.com/komunikator/speech.git",
+    "fetchSpec": "https://github.com/komunikator/speech.git",
+    "gitCommittish": null
   },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "git+https://github.com/komunikator/speech.git#f6ece8878f180abe74d40dd8545179de17ec2a34",
+  "_spec": "git+https://github.com/komunikator/speech.git",
+  "_where": "/home/aea-local/projects/mars",
   "author": "",
-  "license": "ISC",
   "dependencies": {
     "mocha": "^6.1.4",
     "querystring": "^0.2.0",
     "request": "^2.88.0"
-  }
+  },
+  "description": "- Синтез речи - Распознавание речи",
+  "license": "ISC",
+  "main": "index.js",
+  "name": "speech",
+  "scripts": {
+    "test": "mocha --timeout 10000"
+  },
+  "version": "1.0.0"
 }
